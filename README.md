@@ -1,4 +1,4 @@
-# linuxmotehook
+# linuxmotehook-docker
 
 Run https://github.com/v1993/linuxmotehook in Docker.
 
