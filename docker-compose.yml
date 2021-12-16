@@ -1,0 +1,10 @@
+version: '3.0'
+
+services:
+  linuxmotehook:
+    build: "."
+    ports:
+    - "26760:26760/udp"
+    volumes:
+    - "./config.json:/linuxmotehook/config.json"
+    privileged: true

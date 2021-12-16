@@ -1,0 +1,13 @@
+diff --git a/main.lua b/main.lua
+index be8dfd6..7edc1b7 100755
+--- a/main.lua
++++ b/main.lua
+@@ -59,7 +59,7 @@ local app = Gio.Application { application_id = 'org.v1993.linuxmotehook', flags
+ 
+ local socket = lgi.Gio.Socket.new('IPV4', 'DATAGRAM', 'UDP')
+ socket.blocking = false
+-local sa = lgi.Gio.InetSocketAddress.new(Gio.InetAddress.new_loopback('IPV4'), 26760)
++local sa = lgi.Gio.InetSocketAddress.new(Gio.InetAddress.new_any('IPV4'), 26760)
+ assert(socket:bind(sa, true))
+ 
+ local packet = loadfromdata('packet.lua')(socket)
